@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Zakwasowania</title>
+</head>
+<body>
+  <!-- Sprite -->
+  <svg display="none">
+      <symbol id="facebook" viewBox="0 0 24 24">
+                <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+      </symbol>
+  </svg>
+  <svg display="none">
+      <symbol id="instagram" viewBox="0 0 511 511.9">
+          <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/>
+      </symbol>
+  </svg>
+  <svg display="none">
+      <symbol id="burger" viewBox="0 0 512 512">
+         <g>
+	<g>
+		<path d="M492,76H20C8.954,76,0,84.954,0,96s8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,76,492,76z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M492,396H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20
+			C512,404.954,503.046,396,492,396z"/>
+	</g>
+</g>
+      </symbol>
+  </svg>
+  <svg display="none">
+      <symbol id="burger__close" viewBox="0 0 329.26933 329">
+          <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
+      </symbol>
+  </svg>
+  <svg display="none">
+      <symbol id="alergeny" viewBox="0 0 473 38">
+          <g id="Group_941" data-name="Group 941" transform="translate(-1277 -5619)">
+    <g id="Group_906" data-name="Group 906" transform="translate(603 3)">
+      <text id="Gluten" transform="translate(853 5619)" fill="#404040" font-size="22" font-family="Figura-Regular, Figura"><tspan x="35" y="22">GLUTEN</tspan></text>
+    </g>
+    <g id="Group_907" data-name="Group 907" transform="translate(617 3)">
+      <text id="Orzechy" transform="translate(1008 5619)" fill="#404040" font-size="22" font-family="Figura-Regular, Figura"><tspan x="30" y="22">ORZECHY</tspan></text>
+    </g>
+    <g id="Group_905" data-name="Group 905" transform="translate(618 3)">
+      <text id="Soja" transform="translate(698 5619)" fill="#404040" font-size="22" font-family="Figura-Regular, Figura"><tspan x="30" y="22">SOJA</tspan></text>
+    </g>
+    <path id="Path_912" data-name="Path 912" d="M521.441,1002.707l-.934-.934-3.138,3.138-3.432-.074v-3.321l4.689-4.689-.937-.937-4.628,4.628H509.6v-3.365l3.143-3.144-.937-.934-3.3,3.3.013.013-12.815,12.82v8.668l-4.263,4.26.934.937,4.3-4.3,8.634.037L518.128,1006l.013.013Zm-8.827-.865v2.966l-3.014-.063v-2.9Zm-4.337-3.339v6.8l-2.889,2.889v-6.8Zm-4.212,4.212v6.8l-2.879,2.876v-6.8Zm-7.038,7.044,2.836-2.839v6.8l-2.836,2.839Zm7.753,7.715H500.99l-3-.016,2.866-2.863h6.8Zm4.2-4.2h-6.8l2.879-2.879h6.8Zm4.2-4.2h-6.8l3.006-3.006,6.66.143Z" transform="translate(960.559 4627.924)" fill="#404040"/>
+    <g id="Group_940" data-name="Group 940" transform="translate(1090.329 4634.992)">
+      <path id="Path_864" data-name="Path 864" d="M550.374,986.008a7.245,7.245,0,0,0-5.085,2.078,13.079,13.079,0,0,0-1.44,1.948c-1.98,3.377-4.342,5.09-9.36,6.784a11.341,11.341,0,0,0-3.891,2.372,9.825,9.825,0,1,0,13.892,13.9,12.958,12.958,0,0,0,2.356-3.869l.011-.03c1.7-5.022,3.41-7.382,6.792-9.364a12.642,12.642,0,0,0,1.885-1.361,7.3,7.3,0,0,0-5.161-12.454Zm4.074,11.366a11.071,11.071,0,0,1-1.584,1.124c-3.695,2.164-5.649,4.83-7.459,10.18a11.482,11.482,0,0,1-2,3.32,8.287,8.287,0,1,1-11.716-11.721,9.83,9.83,0,0,1,3.295-2c5.359-1.811,8.026-3.765,10.188-7.451a11.378,11.378,0,0,1,1.2-1.639,5.753,5.753,0,0,1,8.084,8.188Z" fill="#404040"/>
+      <path id="Path_865" data-name="Path 865" d="M536.067,1004.328a1.31,1.31,0,1,0-1.307-1.31A1.311,1.311,0,0,0,536.067,1004.328Z" transform="translate(1.989 4.406)" fill="#404040"/>
+      <path id="Path_866" data-name="Path 866" d="M532.548,1002.319a1.309,1.309,0,1,0,1.309,1.309A1.311,1.311,0,0,0,532.548,1002.319Z" transform="translate(0 4.577)" fill="#404040"/>
+      <path id="Path_867" data-name="Path 867" d="M534.9,1004.492a1.309,1.309,0,1,0,1.311,1.309A1.31,1.31,0,0,0,534.9,1004.492Z" transform="translate(1.66 6)" fill="#404040"/>
+      <path id="Path_868" data-name="Path 868" d="M538.253,1003.928a1.309,1.309,0,1,0,1.309,1.309A1.311,1.311,0,0,0,538.253,1003.928Z" transform="translate(2.602 6)" fill="#404040"/>
+      <path id="Path_869" data-name="Path 869" d="M539.86,1000.905a1.309,1.309,0,1,0,1.309,1.309A1.31,1.31,0,0,0,539.86,1000.905Z" transform="translate(3.053 4.18)" fill="#404040"/>
+      <path id="Path_870" data-name="Path 870" d="M540.663,997.882a1.309,1.309,0,1,0,1.31,1.309A1.31,1.31,0,0,0,540.663,997.882Z" transform="translate(3.278 3.332)" fill="#404040"/>
+      <path id="Path_871" data-name="Path 871" d="M542.839,995.49a1.31,1.31,0,1,0,1.31,1.31A1.311,1.311,0,0,0,542.839,995.49Z" transform="translate(3.889 2.661)" fill="#404040"/>
+      <path id="Path_872" data-name="Path 872" d="M545.571,993.261a1.31,1.31,0,1,0,1.309,1.309A1.311,1.311,0,0,0,545.571,993.261Z" transform="translate(4.655 2.035)" fill="#404040"/>
+    </g>
+    <path id="Path_913" data-name="Path 913" d="M463.449,982.646l-1.271.445a13.145,13.145,0,0,1,.38,5.251,4.728,4.728,0,0,0-4.1-1.978c-5.23,0-8.186,3.621-8.576,6.559a7.169,7.169,0,0,0-6.636,5.755c-6.426.229-8.735,3.993-8.735,7.521,0,2.02,2.129,6.446,8.451,6.446,12.262,0,22.24-9.64,22.24-21.49A21.33,21.33,0,0,0,463.449,982.646ZM435.861,1006.2c0-3.871,2.994-6.181,8.009-6.181h.675v-.676a5.794,5.794,0,0,1,5.969-5.093h.675v-.675c0-2.044,2.133-5.86,7.27-5.86a3.317,3.317,0,0,1,3.56,2.766l-.159.373a4.548,4.548,0,0,0-2.355-.56,6.5,6.5,0,0,0-4.307,1.618,7.006,7.006,0,0,0-2.193,4.91,6.512,6.512,0,0,0-4.834,1.6,6.6,6.6,0,0,0-2.316,4.1,5.622,5.622,0,0,0-.611-.166,6.59,6.59,0,0,0-4.49.68,6.056,6.056,0,0,0-3.4,6.193A4.857,4.857,0,0,1,435.861,1006.2Zm18.477-9.07c.2-4.037,2.867-5.485,5.166-5.485,1.241,0,1.911.454,1.911.64a.744.744,0,0,0,.025.185,22.552,22.552,0,0,1-3.894,7.184,3.868,3.868,0,0,1-.579-.034,4.618,4.618,0,0,0-2.63-2.49Zm1.672,4.284a25.262,25.262,0,0,1-6.795,5.019l-.093-.04a4.608,4.608,0,0,0-1.967-3.225,5.126,5.126,0,0,1,1.891-3.719,5.047,5.047,0,0,1,4.412-1.187c.014.006.027.009.041.014a3.311,3.311,0,0,1,2.51,3.139Zm-14.625,2.814a5.5,5.5,0,0,1,2.566-.66,4.777,4.777,0,0,1,1.008.106,4.142,4.142,0,0,1,1.131.421.567.567,0,0,0,.12.069,3.259,3.259,0,0,1,1.6,2.649q0,.039,0,.079c0,.069,0,.137,0,.2a30.689,30.689,0,0,1-9.015,2.345C438.175,1007.6,439.251,1005.356,441.386,1004.227Zm1.576,7.068a9.025,9.025,0,0,1-3.363-.59c16.622-2.145,22.575-14.452,23.51-19.332.049-.1.125-.271.215-.506l.08-.187,0-.026a10.5,10.5,0,0,0,.366-1.343q.084.915.084,1.846C463.852,1002.262,454.481,1011.295,442.962,1011.295Z" transform="translate(870.489 4636.354)" fill="#404040"/>
+  </g>
+      </symbol>
+  </svg>
+  
+<!-- End Sprite-->
+
+<!--Start header-->
+   <header class="header" id="header">
+       <div class="container">
+           <div class="header_size">
+               <div class="choose_languages icon__rwd">
+                    <a class="btn_languages" id="btn_bold" href="#">PL</a> 
+                    <div class="btn_space"> | </div>
+                    <a class="btn_languages" id="btn_reg" href="#">EN</a>
+               </div>
+               
+               <div class="name_center">
+                    <img class="img_zakwasownia" src="images/header/Group%20910.svg">
+               </div>
+               
+               <div class="icon">
+                    <a href=""><svg class="icon_facebook icon__rwd" >
+                           <use xlink:href="#facebook"></use>
+                        </svg></a>
+                        
+                        <svg class="icon_instagram icon__rwd" >
+                           <use xlink:href="#instagram"></use>
+                        </svg>
+                         
+                    <button class="button_burger" id="navToggle">
+                        <svg class="icon_burger" id="">
+                            <use xlink:href="#burger"></use>
+                        </svg>
+                    </button>   
+                    
+                    <button class="button_close show" id="navToggle_close">
+                        <svg class="burger__close">
+                            <use xlink:href="#burger__close"></use>
+                        </svg>
+                    </button>
+               </div>              
+           </div>
+       </div>
+   </header>
+<!--End header-->
+  
+<!--Start description-->
+   <section class="description" id="description">
+       <div class="container">
+            <div class="intro">
+                
+                    <div class="header_menu" id="nav">
+                        <div class="header__menu--media">
+                            <div class="border__link">
+                                <a class="menu__link" href="#" data-scroll="#start">start</a>
+                            </div>
+                            <div class="border__link">
+                                <a class="menu__link" href="#" data-scroll="#o_nas">o nas</a>
+                            </div>
+                            <div class="border__link">
+                                <a class="menu__link" href="#" data-scroll="#menu">menu</a>
+                            </div>
+                            <div class="border__link">
+                                <a class="menu__link" href="#" data-scroll="#rezerwacja">rezerwacja</a>
+                            </div>
+                            <div class="border__link">
+                                <a class="menu__link" href="#" data-scroll="#kontakt">kontakt</a>
+                            </div>
+                            
+                        </div> 
+       
+                        <div class="icon icon__media">      
+                           <div class="choose_languages">
+                                <a class="btn_languages" id="btn_bold" href="#">PL</a> 
+                                <div class="btn_space"> | </div>
+                                <a class="btn_languages" id="btn_reg" href="#">EN</a>
+                           </div>
+                           <div class="icon__size__media">
+                            <a href="#"><svg class="icon_facebook">
+                                   <use xlink:href="#facebook"></use>
+                                </svg></a>
+
+                                <svg class="icon_instagram" >
+                                   <use xlink:href="#instagram"></use>
+                                </svg>   
+                            </div>
+                       </div>
+
+                    </div>
+                
+              
+               <div class="bistro">Bistro</div>
+               <div class="witanie">Witamy w pierwszej wegańskiej i organicznej restauracji
+                    w Trójmieście!</div>
+            </div>
+            
+       </div>
+   </section>
+<!--End description-->
+  
+<!--Start slide_img-->     
+   <section class="slide_img" id="start">
+      <div class="reviews_slider">
+        <div class="slide">
+               <img class="images" src="images/section/01.jpg" alt="">
+           </div>
+
+           <div class="slide">
+               <img class="images" src="images/section/02.jpg" alt="">
+           </div>
+
+           <div class="slide">
+               <img class="images" src="images/section/03.jpg" alt="">
+           </div>
+
+           <div class="slide">
+               <img class="images" src="images/section/04.jpg" alt="">
+           </div>
+       
+      </div>
+       
+   </section>
+<!--End slide_img-->
+    
+<!--Start o_nas-->
+<section class="about" id="o_nas">
+   <div class="container">
+       <div class="o_nas_size">
+           <div class="o_nas">O nas</div>
+           <div class="about_img">
+               <img class="name_img" src="images/O nas/Group%20872.svg" alt="">
+           </div>
+           <div class="about_text">
+                    
+                Zakwasownia Bistro to restauracja serwująca wykwintne dania w swobodnej        atmosferze. W karcie widać inspirację tradycyjną, polską kuchnią. Potrawy        są przygotowywane z ogromną dbałością o każdy szczegół.
+               <br>
+               <br>
+               Ich bazę stanowią świeże warzywa, które pochodzą z ekologicznych, certyfikowanych upraw. Wyjątkowa kuchnia wegańska w wydaniu fine casual to pierwsze takie miejsce na kulinarnej mapie Trójmiasta.
+               
+           </div>
+       </div>
+   </div>    
+</section>
+<!--End o_nas-->
+
+<!--Start klients-->
+<section class="klients">
+    <div class="container">
+           <div class="klients_slider">
+                <div>
+                 
+                  <div class="gate">
+                    <div class="review_klients">
+                        <div class="name_klients_size">
+                           <div class="name_klients">MAGDA I MIKOŁAJ BATOROWIE</div>
+                        </div>
+                        <div class="description_klients_size">
+                            <div class="description_klients">
+                                <p>Twórcy Ekologicznej Przetwórni znanej pod marką Zakwasownia.</p>
+
+                               <p>Pasjonaci kiszenia i zdrowia. O ich zakwasach i kimchi klienci mówią: genialne. Stworzyli Bistro, bo ich marzeniem było miejsce,
+                                w którym dania wegańskie to nie opcje,
+                                a pełnoprawne i wyłączne pozycje w karcie.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="images_klients">
+                       <img class="img_klients" src="images/klients/Magda_i_Miko%C5%82aj_Batorowie.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                  <div class="gate">
+                    <div class="review_klients">
+                        <div class="name_klients_size">
+                           <div class="name_klients">AGNIESZKA SARNACKA</div>
+                        </div>
+                        <div class="description_klients_size">
+                            <div class="description_klients">
+                                <p>Menadżerka restauracji jest weganką i miłośniczką fine diningu.</p>
+
+                               <p>Zatrudnienie w Bistro pozwala jej łączyć pracę z przekonaniami i ulubionym zajęciem, czyli jedzeniem. Uzależniona od serwowanych tutaj pierogów a la ruskie. </p>
+                               
+                               <p>Zorganizuje każdą imprezę, zadba o dobrą atmosferę i sprawny przebieg spotkania. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="klients_slider"></div>
+                    <div class="images_klients">
+                       <img class="img_klients" src="images/klients/Agnieszka_Sarnacka.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="gate">
+                    <div class="review_klients">
+                        <div class="name_klients_size">
+                           <div class="name_klients">ALONA OREL</div>
+                        </div>
+                        <div class="description_klients_size">
+                            <div class="description_klients">
+                                <p>Szefowa kuchni w Zakwasowni Bistro urodziła się i wychowała na Ukrainie. </p>
+
+                               <p>Pracowała w restauracjach w Kijowie,a w Polsce rozwijała swoje umiejętności między innymi w restauracji „Biały królik” pod okiem szefa Marcina Popielarza.</p>
+                               
+                               <p>Wegańskie wersje znanych dań traktuje jako wyzwania. Lubi obserwować wyraz zaskoczenia i błogości na twarzach bywalców. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="klients_slider"></div>
+                    <div class="images_klients">
+                       <img class="img_klients" src="images/klients/Alona_Orel.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="slider-arrows-no_media"></div>
+    
+</section>
+
+<section class="klients__media">
+    <div class="klients__slider__rwd">
+        <div>
+            <div class="gate__media">
+                <div class="review_klients__media">
+                    <div class="name_klients_size--media">
+                       <div class="name_klients--media">MAGDA I MIKOŁAJ BATOROWIE</div>
+                    </div>
+                    
+                    <div class="description_klients_size--media">
+                        <div class="description_klients--media">
+                            Twórcy Ekologicznej Przetwórni znanej pod marką Zakwasownia.
+                            <br>
+                            <br>
+                           Pasjonaci kiszenia i zdrowia. O ich zakwasach i kimchi klienci mówią: genialne. Stworzyli Bistro, bo ich marzeniem było miejsce,
+                            w którym dania wegańskie to nie opcje,
+                            a pełnoprawne i wyłączne pozycje w karcie
+                        </div>
+                    </div>
+                </div>
+                <div class="klients_slider--media"></div>
+                <div class="images_klients--media">
+                   <img class="img_klients--media" src="images/klients/Magda_i_Miko%C5%82aj_Batorowie.jpg" alt="">
+                </div>
+            </div>
+       </div>
+      
+       <div>
+            <div class="gate__media">
+                <div class="review_klients__media">
+                    <div class="name_klients_size--media">
+                       <div class="name_klients--media">AGNIESZKA SARNACKA</div>
+                    </div>
+                    
+                    <div class="description_klients_size--media">
+                        <div class="description_klients--media">
+                            Menadżerka restauracji jest weganką i miłośniczką fine diningu.
+                            <br>
+                            <br>
+                           Zatrudnienie w Bistro pozwala jej łączyć pracę z przekonaniami i ulubionym zajęciem, czyli jedzeniem. Uzależniona od serwowanych tutaj pierogów a la ruskie.
+                           <br>
+                           <br>
+                           Zorganizuje każdą imprezę, zadba o dobrą atmosferę i sprawny przebieg spotkania.
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="klients_slider--media"></div>
+                <div class="images_klients--media">
+                   <img class="img_klients--media" src="images/klients/Agnieszka_Sarnacka.jpg" alt="">
+                </div>
+            </div>
+        </div>
+       
+        <div>
+            <div class="gate__media">
+                <div class="review_klients__media">
+                    <div class="name_klients_size--media">
+                       <div class="name_klients--media">ALONA OREL</div>
+                    </div>
+                    
+                    <div class="description_klients_size--media">
+                        <div class="description_klients--media">
+                            Szefowa kuchni w Zakwasowni Bistro urodziła się i wychowała na Ukrainie.
+                            <br>
+                            <br>
+
+                           Pracowała w restauracjach w Kijowie,a w Polsce rozwijała swoje umiejętności między innymi w restauracji „Biały królik” pod okiem szefa Marcina Popielarza.
+                           <br>
+                           <br>
+                           Wegańskie wersje znanych dań traktuje jako wyzwania. Lubi obserwować wyraz zaskoczenia i błogości na twarzach bywalców.
+                        </div>
+                    </div>
+                </div>
+                <div class="klients_slider--media"></div>
+                <div class="images_klients--media">
+                   <img class="img_klients--media" src="images/klients/Alona_Orel.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider-arrows-media"></div>
+</section>
+
+<section class="menu" id="menu">
+    <div class="container">
+        <div class="menu__display">
+            <div class="menu__title">
+                <h2>menu</h2>
+            </div>
+            <div class="menu__name">
+                <div class="menu__size">
+                        <h1>PRZYSTAWKI</h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <td class="dish__name">Tatar z podsuszanych pomidorów Lima z chipsami ziemniaczanymi
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-1.svg"></td>
+                            <td class="dish__price">22</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Gotowane serca karczocha z kalafiorem
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-2.svg">
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-3.svg"></td>
+                            <td class="dish__price">32</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Majtasy z emulsją z palonego ziemniaka
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-1.svg"></td>
+                            <td class="dish__price">21</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Deska serów wegańskich
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-3.svg"></td>
+                            <td class="dish__price">30</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="menu__size">
+                        <h1>ZUPY</h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <td class="dish__name">Zupa szczawiowa z purée ziemniaczanym i shimeji
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-1.svg"></td>
+                            <td class="dish__price">24</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Chłodnik litewski na zakwasie z ziemniakami, koprem i dymką
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-1.svg"></td>
+                            <td class="dish__price">22</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="menu__size">
+                        <h1>SAŁATY</h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <td class="dish__name">Gruszka i ser z nerkowców</td>
+                            <td class="dish__price">25</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Buraki, pesto pietruszkowe i Grana Vegano</td>
+                            <td class="dish__price">25</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="menu__size">
+                        <h1>DANIA GŁÓWNE</h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <td class="dish__name">Gołąbki z soczewicą i kiszonymi szparagami</td>
+                            <td class="dish__price">44</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Blanszowane młode warzywa z salsą verde z marchwi (danie postne)</td>
+                            <td class="dish__price">32</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Kopytka z kaszubskimi kurkami i białym sosem winnym
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-2.svg"></td>
+                            <td class="dish__price">35</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Pierogi à la ruskie ze skwarkami z boczniaków
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-2.svg"></td>
+                            <td class="dish__price">35</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Naleśnik gryczany z boczniakami</td>
+                            <td class="dish__price">32</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Grillowane szparagi z ziemniakami i konfiturą z szalotki
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-2.svg"></td>
+                            <td class="dish__price">44</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="menu__size">
+                        <h1>DODATKI</h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <td class="dish__name">Purée ziemniaczane</td>
+                            <td class="dish__price">8</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Ziemniaki podsmażane na maśle roślinnym</td>
+                            <td class="dish__price">6</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Sałaty z sosami</td>
+                            <td class="dish__price">7</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Kiszone warzywa</td>
+                            <td class="dish__price">9</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Surówki sezonowe</td>
+                            <td class="dish__price">5</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="menu__size">
+                        <h1>DLA DZIECI</h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <td class="dish__name">Krem z pomidorów i marchewki</td>
+                            <td class="dish__price">12</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Purée ziemniaczane z groszkiem i marchewką z wegańskim sosem pieczeniowym</td>
+                            <td class="dish__price">18</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="menu__size">
+                        <h1>DESERY</h1>
+                    <table style="width: 100%">
+                        <tr>
+                            <td class="dish__name">Malinowa beza à la Pavlova z kremem waniliowym
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-1.svg">
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-2.svg"></td>
+                            <td class="dish__price">25</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Brownie z jagodami kamczackimi</td>
+                            <td class="dish__price">24</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Tarta z kremem nowojorskim i borówkami</td>
+                            <td class="dish__price">20</td>
+                        </tr>
+                        <tr>
+                            <td class="dish__name">Karmelizowane jabłka na kruchym cieście z espumą Amaretto
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-1.svg">
+                            
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-2.svg">
+                            
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-3.svg"></td>
+                            <td class="dish__price">22</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="menu__alergeny">
+                    <div class="alergeny">
+                        <h1>Alergeny</h1>
+                    </div>
+                    <div class="alergeny__images">
+                        <div class="allergeny__name">
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-1.svg">
+                            <span>SOJA</span>
+                        </div>
+                        <div class="allergeny__name">
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-2.svg">
+                            <span>GLUTEN</span>  
+                        </div>
+                        <div class="allergeny__name">
+                            <img src="http://zakwasownia.dev4.akanza.pl/wp-content/themes/zakwasownia/img/ico-3.svg">
+                            <span>ORZECHY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="kontakt" id="rezerwacja">
+    <div class="container">
+        <div class="kontakt__rezerwacja">
+            <div class="rezerwacja__telefon">
+                <h3><pre>REZERWACJE</pre> 
+                    <pre>TELEFONICZNE</pre></h3>
+            </div>
+            <a href="#">
+               <div class="rezerwacja__numer">
+                <h1>+48 518 086 240</h1>
+            </div></a>
+        </div>
+        <div class="kontakt__title" id="kontakt">
+            <div class="kontakt__left">KONTAKT</div>
+            <div class="kontakt__info">
+                <div class="info__adres">
+                    <div class="name__bistro">ZAKWASOWNIA BISTRO</div>
+                    <div class="adres__bistro">
+                        <pre>Garnizon</pre>
+                        <pre>ul. Norwida 2</pre>
+                        <pre>80-280 Gdańsk</pre>
+                    </div>
+                </div>
+                <div class="bistro__timetable">
+                    <div class="timetable__title">GODZINY OTWARCIA</div>
+                    <div class="adres__bistro">
+                        <pre>poniedziałek: nieczynne</pre>
+                        <pre>wtorek – sobota: 10.00 – 21.00</pre>
+                        
+                        <pre>niedziela: 10.00 – 18.00</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review__box">
+            <div class="imie__nazwisko"> 
+                <div class="review__imie"><input type="text" name="firstname" placeholder="IMIĘ"></div>
+                <div class="review__nazwisko"><input type="text" name="lastname" placeholder="NAZWISKO"></div>
+            </div>
+            <div class="mail__telefon">
+                <div class="review__mail"><input type="email" name="firstname" placeholder="E-MAIL"></div>
+                <div class="review__telefon"><input type="text" name="firstname" placeholder="TELEFON"></div>
+            </div>
+            <div class="wiadowosc">
+                <div class="review__wiadowosc">
+                <textarea class="input__wiadowosc" type="text" name="firstname" placeholder="WIADOMOŚĆ"></textarea>
+                </div>
+            </div>
+            
+        </div>
+        
+            <div class="button__box">
+                <span class="arrow__js">
+                    ↑
+                </span>
+                <input class="btn__wyslij" type = "submit" id="input__submit" value = "WYŚLIJ">
+            </div>
+    </div>
+</section>
+<!--↑-->
+<section class="end" id="end">
+    <div class="container">
+        <div class="end__size">
+            <div class="end__title">ALL RIGHTS RESERVED © 2020 ZAKWASOWNIA BISTRO
+            <pre>POLITYKA PRYWATNOŚCI</pre>
+            </div>
+            <div class="end__images">
+                <img class="end__img" src="images/end/Group%20924.svg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!--End klients-->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="JS/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

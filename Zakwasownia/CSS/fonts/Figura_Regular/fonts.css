@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Figura';
+    src: url('/Figura-Regular.eot');
+    src: url('/Figura-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/Figura-Regular.woff2') format('woff2'),
+         url('/Figura-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+
